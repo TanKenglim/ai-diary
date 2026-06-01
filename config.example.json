@@ -1,0 +1,41 @@
+{
+  "version": "1.1",
+  "storage": {
+    "diary_dir": "./diary",
+    "summary_dir": "./summary",
+    "diary_format": "monthly",
+    "diary_filename_pattern": "YYYY-MM.md"
+  },
+  "mood": {
+    "scale": "1-10",
+    "labels": {
+      "1-2": "很低落",
+      "3-4": "不太好",
+      "5-6": "一般",
+      "7-8": "不错",
+      "9-10": "非常好"
+    }
+  },
+  "tags": {
+    "preset": [
+      "工作", "学习", "健康", "运动", "社交", "家庭",
+      "财务", "阅读", "创作", "旅行", "美食", "娱乐",
+      "思考", "成长", "情绪", "睡眠"
+    ],
+    "custom": []
+  },
+  "sections": {
+    "description": "以下板块为可选，根据当日内容灵活使用，有则记录，无则跳过",
+    "available": [
+      "今日事项", "健康", "学习", "工作", "人际关系",
+      "环境", "心情", "感悟", "明日计划"
+    ]
+  },
+  "summary": {
+    "month_trigger": "用户说'帮我总结这个月'",
+    "year_trigger": "用户说'帮我总结今年'",
+    "include_mood_trend": true,
+    "include_tag_stats": true,
+    "note": "周总结已取消，避免过于琐碎"
+  }
+}
