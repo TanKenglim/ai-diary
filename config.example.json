@@ -1,10 +1,30 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "storage": {
     "diary_dir": "./diary",
     "summary_dir": "./summary",
     "diary_format": "monthly",
     "diary_filename_pattern": "YYYY-MM.md"
+  },
+  "input": {
+    "modes": {
+      "active": {
+        "enabled": true,
+        "description": "用户主动陈述当天发生的事情"
+      },
+      "auto_extract": {
+        "enabled": true,
+        "description": "从日常对话中自动识别和提取日记信号",
+        "privacy_filter": true,
+        "skip_technical_content": true
+      }
+    },
+    "user_controls": {
+      "pause": "用户说'今天不记日记'或'暂停记录'",
+      "resume": "用户说'恢复记录'或'继续记'",
+      "exclude": "用户说'这段不要记'",
+      "review": "用户说'帮我看看今天记了什么'"
+    }
   },
   "mood": {
     "scale": "1-10",
@@ -37,5 +57,22 @@
     "include_mood_trend": true,
     "include_tag_stats": true,
     "note": "周总结已取消，避免过于琐碎"
+  },
+  "privacy": {
+    "description": "自动提取时的隐私保护规则",
+    "skip_patterns": [
+      "纯技术讨论和问答",
+      "代码和具体技术方案",
+      "公司内部信息和商业机密",
+      "账号密码等敏感信息",
+      "用户明确要求不记录的内容"
+    ],
+    "extract_patterns": [
+      "生活化表达和情绪状态",
+      "社交互动和人际关系",
+      "健康运动和身体状态",
+      "天气环境和位置信息",
+      "个人感悟和想法灵感"
+    ]
   }
 }
